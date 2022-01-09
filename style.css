@@ -1,0 +1,46 @@
+line {
+    stroke: grey;
+    stroke-width: 4.5;
+}
+
+#refLine{
+    stroke:purple
+}
+circle {
+    stroke-width: 1;
+    stroke: red
+}
+
+text{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    
+    
+
+    
+}
+html{
+    background-color: black;
+    
+}
+
+
+#axisGroup{
+    color:white;
+    stroke-width: 3;
+    
+}
+
+
+#xGroup{
+    font-size: 15px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+
+}
+
+#yGroup{
+    font-size: 15px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+

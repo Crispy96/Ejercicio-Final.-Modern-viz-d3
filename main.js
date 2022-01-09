@@ -17,7 +17,7 @@ const svg = d3.select("#chart").append("svg").attr("id","svg").attr("width", wid
 const elementGroup = svg.append("g").attr("id", "elementGroup")
     .attr("transform", `translate(${margin.left}, ${margin.top})`)
 
-var x = d3.scaleBand().range([0,width-margin.left-margin.right]).padding(0.2)
+var x = d3.scaleBand().range([0,width-margin.left-margin.right]).padding(0.4)
 var y = d3.scaleLinear().range([height - margin.top - margin.bottom, 0])
 
 var color = d3.scaleOrdinal().range(d3.schemeDark2)
@@ -56,7 +56,7 @@ d3.csv("data.csv").then(data =>{
         d.year = +d.year
     })
     x.domain(data.map(d=>d.year))
-    y.domain([0, ageToday ])
+    y.domain([0, ageToday + 2 ])
     color.domain(data)
 
     xGroup.call(axisX)
@@ -174,7 +174,7 @@ d3.csv("data.csv").then(data =>{
         .attr("y", d => y(d.age) - margin.bottom/2.5)
         .attr("font-size", 16)
         .attr("text-anchor", 'middle')
-        .attr("fill", d => color(d.age))
+        .attr("fill", d => color(d.name))
         
         
     
